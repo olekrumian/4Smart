@@ -1,0 +1,3792 @@
+// Fonts family
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Light.eot");
+  src: url("../fonts/Rubik-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Rubik-Light.woff2") format("woff2"),
+    url("../fonts/Rubik-Light.woff") format("woff"),
+    url("../fonts/Rubik-Light.ttf") format("truetype"),
+    url("../fonts/Rubik-Light.svg#Rubik-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../Rubik-Regular.eot");
+  src: url("../Rubik-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../Rubik-Regular.woff2") format("woff2"),
+    url("../Rubik-Regular.woff") format("woff"),
+    url("../Rubik-Regular.ttf") format("truetype"),
+    url("../Rubik-Regular.svg#Rubik-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.eot");
+  src: url("../fonts/Rubik-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Rubik-Medium.woff2") format("woff2"),
+    url("../fonts/Rubik-Medium.woff") format("woff"),
+    url("../fonts/Rubik-Medium.ttf") format("truetype"),
+    url("../fonts/Rubik-Medium.svg#Rubik-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.light() {
+  font-family: "Rubik";
+  font-weight: 300;
+}
+
+.regular() {
+  font-family: "Rubik";
+  font-weight: 400;
+}
+
+.medium() {
+  font-family: "Rubik";
+  font-weight: 500;
+}
+
+// Colors
+@textcolor: #000000;
+@greycolor: #989898;
+@bluecolor: #0066ff;
+@whitecolor: #ffffff;
+@bordercolor: #989898;
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  .light();
+}
+
+button,
+input,
+a,
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Btn
+.btn_main {
+  text-align: center;
+  width: 15rem;
+  height: 4.7rem;
+  color: @whitecolor;
+  background-color: @bluecolor;
+  .medium();
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border: 2px solid @bluecolor;
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: @bluecolor;
+    background-color: @whitecolor;
+    border: 2px solid @bluecolor;
+  }
+}
+
+// Header
+.header {
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    max-width: 114rem;
+    margin-top: 4.5rem;
+
+    .header__nav-wrapper {
+      height: 11.2rem;
+    }
+  }
+
+  &__logo {
+    &-img {
+      margin-top: -1.4rem;
+    }
+  }
+
+  &__nav {
+    .medium();
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: inherit;
+    padding: 0;
+
+    &-link {
+      display: inline;
+      margin: 0 7rem 0 0;
+      scroll-behavior: smooth;
+
+      &:last-child {
+        padding: 0;
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: @textcolor;
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+
+  &__schedule {
+    .light();
+
+    &-item {
+      text-align: right;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 2.8rem;
+      letter-spacing: inherit;
+
+      &:last-child {
+      }
+
+      a {
+        color: @bluecolor;
+        text-decoration: none;
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 102, 255, 0.6);
+        }
+      }
+    }
+  }
+}
+
+// Ремонтуємо
+.repair {
+  margin-top: 10rem;
+
+  &__title {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-align: center;
+    margin: 0 auto;
+    .medium();
+  }
+
+  &__block {
+    margin-top: 15rem;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      .repair__block-hover {
+        filter: blur(0.2rem);
+        opacity: 0.5;
+        transform: scale(1);
+
+        &:hover {
+          filter: blur(0);
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &-hover {
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-item {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      .light();
+    }
+  }
+}
+
+// Найчастіші послуги
+.services {
+  margin-top: 30rem;
+
+  &-prev-btn {
+    left: -15rem;
+    background-color: @whitecolor;
+  }
+
+  &-next-btn {
+    right: -15rem;
+    background-color: @whitecolor;
+  }
+
+  &__slider {
+    margin: 0 auto;
+    max-width: 70rem;
+    height: 38rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-item {
+      height: 100%;
+    }
+
+    &-btn {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      width: 1.7rem;
+      height: 3.2rem;
+      border: none;
+      background-color: @whitecolor;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.6rem;
+    text-align: center;
+    margin: 0 auto 15rem;
+    .medium();
+  }
+
+  &__text {
+    margin: 4rem 0 0 0;
+    text-align: center;
+    color: @greycolor;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.9rem;
+    .light();
+
+    a {
+      transition: linear 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(0, 102, 255, 0.6);
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &-img {
+      flex-basis: 35%;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &-text {
+      flex-basis: 64%;
+      margin-left: 5rem;
+
+      strong {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6rem;
+        .medium();
+        margin-bottom: 2rem;
+      }
+
+      p {
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.8rem;
+        .light();
+      }
+
+      h4 {
+        margin-bottom: 9rem;
+        .medium();
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.guarantee {
+  margin-top: 54.8rem;
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    .medium();
+    color: @textcolor;
+  }
+
+  &__main-text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 66.5rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+    .light();
+    color: @textcolor;
+
+    a {
+      display: block;
+      margin-top: 2.8rem;
+      transition: linear 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(0, 102, 255, 0.6);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 185rem;
+    right: 5rem;
+  }
+}
+
+.about {
+  text-align: center;
+  margin: 60rem 0 2rem 0;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  .light();
+  color: @textcolor;
+
+  a {
+    transition: linear 0.2s;
+
+    &:hover {
+      text-decoration: none;
+      color: rgba(0, 102, 255, 0.6);
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.6rem;
+    .medium();
+    color: @textcolor;
+  }
+
+  &__text {
+    margin: 6rem auto 0;
+    max-width: 70rem;
+  }
+
+  &__adress {
+    p {
+      margin-top: 4rem;
+      .medium();
+    }
+  }
+
+  &__shedule {
+    margin-top: 4rem;
+    .medium();
+  }
+
+  strong {
+    display: block;
+  }
+
+  &__social {
+    margin: 4rem auto 0;
+
+    img {
+      display: inline-block;
+      margin: 0 1.5rem;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  margin: 8rem auto 1rem;
+  font-size: 1.4rem;
+  .light();
+  line-height: 2.8rem;
+  color: @greycolor;
+
+  p {
+    display: inline-block;
+
+    a {
+      transition: linear 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(0, 102, 255, 0.6);
+      }
+    }
+  }
+}
+
+/* Button UP */
+#upbutton {
+  background: url("../img/up-arrow.svg") no-repeat top left;
+  height: 6.4rem;
+  width: 6.4rem;
+  bottom: 4rem;
+  right: 10rem;
+  cursor: pointer;
+  position: fixed;
+  z-index: 38;
+  display: none;
+}
+
+// Статус ремонту
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 42;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup__content {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: transparent;
+}
+
+.popup__close {
+  position: absolute;
+  top: 0rem;
+  right: 21rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  font-size: 3rem;
+  background-color: transparent;
+  color: @bluecolor;
+}
+
+.frame__chekout {
+  overflow: hidden;
+  width: 735px;
+  height: 580px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+// Form
+.form {
+  display: block;
+  text-align: left;
+  margin: 4rem 8rem 0;
+  width: 53rem;
+  height: 75.6rem;
+  border-radius: 0.5rem;
+
+  label {
+    display: block;
+    margin-top: 2rem;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    .regular();
+    font-size: 1.4rem;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    color: @textcolor;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:valid:not(:placeholder-shown) {
+      border-color: #00e75c;
+    }
+  }
+
+  .form__input {
+    display: block;
+    padding: 1rem 3rem;
+    width: 37rem;
+    height: 18.8rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    .light();
+    background-color: @whitecolor;
+    color: @textcolor;
+    border-radius: 0.5rem;
+    border-color: #989898;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+// Заявка на ремонт
+.pop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 42;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &__header {
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    .medium();
+  }
+
+  &__form {
+    position: relative;
+    margin: 0 auto;
+    width: 53rem;
+    height: 75.6rem;
+    background-color: @whitecolor;
+    border-radius: 0.5rem;
+  }
+
+  &__send {
+    margin: 3rem 0 5rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    width: 3rem;
+    text-align: center;
+    border: none;
+    font-size: 3rem;
+    background-color: transparent;
+    color: @bluecolor;
+  }
+
+  &__input {
+    width: 37rem;
+    height: 5.9rem;
+    padding-left: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    .light();
+    background-color: @whitecolor;
+    color: @bordercolor;
+    border: 0.5px solid @bordercolor;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &::-moz-placeholder {
+      opacity: 1;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:-moz-placeholder {
+      opacity: 1;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:-ms-input-placeholder {
+      opacity: 1;
+      -ms-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus::-moz-placeholder {
+      opacity: 0;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus:-moz-placeholder {
+      opacity: 0;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus:-ms-input-placeholder {
+      opacity: 0;
+      -ms-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+// Модальне вікно ремонт тетелфонiв
+.phone__pricepop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 42;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .popphone__price {
+    position: relative;
+    margin: 0 auto;
+    width: 95.8rem;
+    height: 100%;
+    background-color: @whitecolor;
+    border-radius: 0.5rem;
+    overflow: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-title {
+      margin: 0;
+
+      h3 {
+        padding: 5rem 0 2rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      strong {
+        display: block;
+        margin: 2.3rem 0 0.5rem 0;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+      }
+
+      th {
+        width: 100%;
+      }
+
+      td {
+        display: block;
+        width: 8.5rem;
+      }
+
+      th,
+      td {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        .light();
+      }
+    }
+
+    &-wrapper {
+      margin: 0 10rem;
+
+      .fornote {
+        padding-top: 2.5rem;
+        display: flex;
+        vertical-align: middle;
+      }
+
+      p {
+        padding-left: 2.5rem;
+        margin: 0 0 5rem 0;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        .light();
+        color: @greycolor;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 10rem;
+          transform: translateY(20%);
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          background-color: @bluecolor;
+        }
+      }
+    }
+  }
+}
+
+// Модальне вікно ремонт планшетiв
+.tablet__pricepop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 42;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .poptablet__price {
+    position: relative;
+    margin: 0 auto;
+    width: 95.8rem;
+    height: 100%;
+    background-color: @whitecolor;
+    border-radius: 0.5rem;
+    overflow: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-title {
+      margin: 0;
+
+      h3 {
+        padding: 5rem 0 2rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      strong {
+        display: block;
+        margin: 2.3rem 0 0.5rem 0;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+      }
+
+      th {
+        width: 100%;
+      }
+
+      td {
+        display: block;
+        width: 8.5rem;
+      }
+
+      th,
+      td {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        .light();
+      }
+    }
+
+    &-wrapper {
+      margin: 0 10rem;
+
+      .fornote {
+        padding-top: 2.5rem;
+        display: flex;
+        vertical-align: middle;
+      }
+
+      p {
+        padding-left: 2.5rem;
+        margin: 0 0 5rem 0;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        .light();
+        color: @greycolor;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 10rem;
+          transform: translateY(20%);
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          background-color: @bluecolor;
+        }
+      }
+    }
+  }
+}
+
+// Модальне вікно ремонт ПК та Ноутбукiв
+.pc__pricepop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 42;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .pc__style {
+    position: relative;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    .medium();
+    color: @textcolor;
+    text-decoration: none;
+    background-color: @whitecolor;
+    border: none;
+    padding: 3rem 0 0 0 !important;
+
+    &:hover {
+      text-decoration: none;
+      color: @textcolor;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: url("../img/downarrow.svg") no-repeat center;
+      width: 1.4rem;
+      height: 0.8rem;
+      margin: 0.9rem 0 0 0.5rem;
+    }
+  }
+
+  .poppc__price {
+    position: relative;
+    margin: 0 auto;
+    width: 95.8rem;
+    height: 100%;
+    background-color: @whitecolor;
+    border-radius: 0.5rem;
+    overflow: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-title {
+      margin: 0;
+
+      h3 {
+        padding: 5rem 0 2rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      strong {
+        display: block;
+        padding: 2.3rem 0 0.5rem 0;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+
+        &:nth-child(1) {
+          padding-top: 2.3rem;
+        }
+      }
+
+      th {
+        width: 100%;
+      }
+
+      td {
+        display: block;
+        width: 8.5rem;
+      }
+
+      th,
+      td {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        .light();
+      }
+    }
+
+    &-wrapper {
+      margin: 0 10rem;
+
+      .fornote {
+        padding-top: 2.5rem;
+        display: flex;
+        vertical-align: middle;
+      }
+
+      p {
+        padding-left: 2.5rem;
+        margin: 0 0 3.5rem 0;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        .light();
+        color: @greycolor;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0rem;
+          transform: translateY(20%);
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          background-color: @bluecolor;
+        }
+      }
+    }
+  }
+}
+
+// Модальне вікно ремонт Інші гаджети
+.another__pricepop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 42;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .pc__style {
+    position: relative;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    .medium();
+    color: @textcolor;
+    text-decoration: none;
+    background-color: @whitecolor;
+    border: none;
+    padding: 3rem 0 0 0 !important;
+
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: @textcolor;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: url("../img/downarrow.svg") no-repeat center;
+      width: 1.4rem;
+      height: 0.8rem;
+      margin: 0.9rem 0 0 0.5rem;
+    }
+  }
+
+  .popanother__price {
+    position: relative;
+    margin: 0 auto;
+    width: 95.8rem;
+    height: 100%;
+    background-color: @whitecolor;
+    border-radius: 0.5rem;
+    overflow: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-title {
+      margin: 0;
+
+      h3 {
+        padding: 5rem 0 2rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      strong {
+        display: block;
+        padding: 2.3rem 0 0.5rem 0;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+      }
+
+      th {
+        width: 100%;
+      }
+
+      td {
+        display: block;
+        width: 8.5rem;
+      }
+
+      th,
+      td {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        .light();
+      }
+    }
+
+    &-wrapper {
+      margin: 0 10rem;
+
+      .fornote {
+        padding-top: 2.5rem;
+        display: flex;
+        vertical-align: middle;
+      }
+
+      p {
+        padding-left: 2.5rem;
+        margin: 0 0 3.5rem 0;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        .light();
+        color: @greycolor;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0rem;
+          transform: translateY(20%);
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          background-color: @bluecolor;
+        }
+      }
+    }
+  }
+}
+
+// Модальне вікно блоку гарантiя
+.pop_guarant {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 42;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup__guarantee {
+  position: relative;
+  margin: 0 auto;
+  width: 114rem;
+  height: 79rem;
+  background-color: @whitecolor;
+  border-radius: 0.5rem;
+
+  .pop__close {
+    position: absolute;
+    top: 0rem;
+    right: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    border: none;
+    font-size: 3rem;
+    background-color: transparent;
+    color: #0066ff;
+  }
+
+  &-wrapper {
+    margin: 0rem auto;
+    max-width: 94rem;
+    max-height: 46rem;
+  }
+
+  &-title {
+    padding-top: 5rem;
+    margin: 0rem 0rem 4.5rem 0rem;
+
+    h3 {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      .medium();
+    }
+  }
+
+  &-text {
+    margin: 0rem 0rem 0rem 0rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    .light();
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    strong {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      .medium();
+
+      &::last-child {
+        margin-top: 2.8rem;
+      }
+    }
+  }
+}
+
+.interactive_one {
+  position: absolute;
+  background: url(../img/interactive/interactive1.svg) center no-repeat;
+  width: 69.2rem;
+  height: 44.7rem;
+  left: -10rem;
+  top: 180rem;
+}
+
+.interactive_three {
+  position: absolute;
+  background: url(../img/interactive/interactive3.svg) center no-repeat;
+  width: 45.5rem;
+  height: 18.5rem;
+  left: 107px;
+  top: 255rem;
+}
+
+.interactive_four {
+  position: absolute;
+  background: url(../img/interactive/interactive4.svg) center no-repeat;
+  width: 39rem;
+  height: 19.9rem;
+  right: 4rem;
+  top: 265rem;
+}
+
+// Меню бургер
+.burger-menu {
+  display: none;
+}
+
+.btn__wrapper {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .burger-menu {
+    display: inherit;
+  }
+
+  .burger-menu__button {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 41;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .burger-menu__button:hover .burger-menu__lines {
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+  }
+
+  .burger-menu__lines,
+  .burger-menu__lines::after,
+  .burger-menu__lines::before {
+    position: absolute;
+    width: 2rem;
+    height: 0.3rem;
+    background-color: @bluecolor;
+  }
+
+  .burger-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .burger-menu__lines::before {
+    content: "";
+    top: -0.6rem;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .burger-menu__lines::after {
+    content: "";
+    top: 0.6rem;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .burger-menu__active .burger-menu__lines {
+    background-color: transparent;
+  }
+
+  .burger-menu__active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .burger-menu__active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .burger-menu__nav {
+    text-align: center;
+    padding: 2rem 0 8rem 0;
+    position: fixed;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    left: 100%;
+    transition: 0.3s;
+  }
+
+  .burger-menu__nav a {
+    text-decoration: none;
+    color: @textcolor;
+    transition: linear 0.2s;
+
+    &:hover {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .burger-menu__img {
+    margin-bottom: 8rem;
+  }
+
+  .burger-menu__schedule {
+    margin: 8rem 0 5rem 0;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    .light();
+  }
+
+  .burger-menu__schedule-item:last-child {
+    a {
+      color: @bluecolor;
+      text-decoration: none;
+      transition: linear 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(0, 102, 255, 0.6);
+      }
+    }
+  }
+
+  .burger-menu__active .burger-menu__nav {
+    left: 0;
+  }
+
+  .burger-menu__link {
+    .medium();
+    font-size: 1.6rem;
+    line-height: 19px;
+    text-decoration: none;
+    color: @textcolor;
+    padding-bottom: 3rem;
+  }
+
+  .burger-menu__link:hover {
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+  }
+
+  .burger-menu__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  .burger-menu__active .burger-menu__overlay {
+    display: block;
+  }
+
+  .header {
+    &__logo {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__schedule {
+      display: none;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: flex-end;
+      margin: 1.5rem 1.5rem;
+    }
+  }
+
+  .guarantee__img {
+    display: none;
+  }
+
+  .interactive_four {
+    display: none;
+  }
+
+  .pop {
+    display: none;
+    position: fixed;
+    z-index: 39;
+
+    &__close {
+      position: absolute;
+      top: 0rem;
+      right: 2.5rem;
+      width: 2rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+    }
+  }
+
+  .pop_guarant {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .popup__guarantee {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: @whitecolor;
+    overflow-y: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 1.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-wrapper {
+      margin: 0rem auto;
+      max-width: 94rem;
+      max-height: 46rem;
+    }
+
+    &-title {
+      padding-top: 5rem;
+      margin: 0rem 0rem 4.5rem 0rem;
+      text-align: center;
+
+      h3 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      margin: 0rem 0rem 0rem 0rem;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      .light();
+
+      ul {
+        padding-left: 0;
+      }
+
+      strong {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+
+        &::last-child {
+          margin-top: 2.8rem;
+        }
+      }
+    }
+  }
+
+  .phone__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .popphone__price {
+      position: relative;
+      margin: 0 auto;
+      width: 95.8rem;
+      height: 100%;
+      background-color: @whitecolor;
+      border-radius: 0.5rem;
+      overflow: auto;
+
+      .pop__close {
+        position: absolute;
+        top: 0rem;
+        right: 2.5rem;
+        width: 2.5rem;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        background-color: transparent;
+        color: #0066ff;
+      }
+
+      &-title {
+        margin: 0;
+
+        h3 {
+          padding: 5rem 0 2rem;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+
+      &-text {
+        strong {
+          display: block;
+          margin: 2.3rem 0 0.5rem 0;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          .medium();
+        }
+
+        th {
+          width: 100%;
+        }
+
+        td {
+          display: block;
+          width: 8.5rem;
+        }
+
+        th,
+        td {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          .light();
+        }
+      }
+
+      &-wrapper {
+        margin: 0 10rem;
+
+        .fornote {
+          padding-top: 2.5rem;
+          display: flex;
+          vertical-align: middle;
+        }
+
+        p {
+          padding-left: 2.5rem;
+          margin: 0 0 5rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          .light();
+          color: @greycolor;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 10rem;
+            transform: translateY(20%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: @bluecolor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .repair {
+    &__title {
+      margin: 12.8rem auto 10rem;
+      padding: 0;
+    }
+
+    &__block {
+      margin: 0;
+
+      &-hover {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+  .services {
+    margin-top: 20rem;
+
+    &__title {
+    }
+
+    &__text {
+      margin: 1rem 0 0 0;
+    }
+
+    &-prev-btn {
+      left: -5rem;
+      background-color: @whitecolor;
+    }
+
+    &-next-btn {
+      right: -5rem;
+      background-color: @whitecolor;
+    }
+
+    &__slider {
+      margin: 0 auto 2rem;
+      max-width: 60rem;
+      height: 38rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &-item {
+        height: 100%;
+        outline: none;
+      }
+
+      &-btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 1.7rem;
+        height: 3.2rem;
+        border: none;
+        background-color: @whitecolor;
+      }
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      &-img {
+        flex-basis: 35%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      &-text {
+        flex-basis: 64%;
+        margin-left: 5rem;
+
+        strong {
+          display: block;
+          font-size: 2.2rem;
+          font-weight: 500;
+          line-height: 2.6rem;
+          .medium();
+          margin-bottom: 2rem;
+        }
+
+        p {
+          display: inline-block;
+          margin-bottom: 2rem;
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: 2.8rem;
+          .light();
+        }
+
+        h4 {
+          margin-bottom: 8.9rem;
+          .medium();
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 5rem;
+      text-align: center;
+      color: @greycolor;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.9rem;
+      .light();
+
+      a {
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 102, 255, 0.6);
+        }
+      }
+    }
+  }
+
+  .guarantee {
+    margin-top: 25rem;
+
+    &__title {
+      margin-top: 5rem;
+    }
+  }
+
+  .about {
+    margin: 30rem 0 2rem 0;
+  }
+
+  // Заявка на ремонт
+
+  .guarantee__img {
+    display: none;
+  }
+
+  .interactive_one {
+    display: none;
+  }
+
+  .interactive_three {
+    display: none;
+  }
+
+  .interactive_four {
+    display: none;
+  }
+
+  .pop {
+    display: none;
+    position: fixed;
+    z-index: 39;
+
+    &__close {
+      position: absolute;
+      top: 0rem;
+      right: 2rem;
+      width: 2rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: @bluecolor;
+    }
+  }
+
+  .pop_guarant {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup__guarantee {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: @whitecolor;
+    overflow-y: auto;
+
+    &-title {
+      text-align: center;
+      padding-top: 3.5rem;
+      margin: 0rem 1.5rem 3.5rem;
+
+      h3 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      margin: 0rem 3rem 5rem 3rem;
+
+      ul {
+        padding-left: 0;
+      }
+    }
+  }
+
+  // Модальне вікно ремонт телефонiв 991px
+  .phone__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .popphone__price {
+      width: 100%;
+
+      &-title {
+        margin: 0;
+
+        h3 {
+          padding: 5rem 0 2rem;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт планшетiв 991px
+  .tablet__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .poptablet__price {
+      width: 100%;
+
+      &-title {
+        margin: 0;
+
+        h3 {
+          padding: 5rem 0 2rem;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт ПК та Ноутбукiв 991px
+  .pc__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .poppc__price {
+      width: 100%;
+
+      &-title {
+        margin: 0;
+
+        h3 {
+          padding: 5rem 0 2rem;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт Інші гаджети 991px
+  .another__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .popanother__price {
+      width: 100%;
+
+      &-title {
+        margin: 0;
+
+        h3 {
+          padding: 5rem 0 2rem;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+    }
+  }
+
+  #upbutton {
+    background: url("../img/up-arrow.svg") no-repeat top left;
+    height: 5rem;
+    width: 5rem;
+    bottom: 10rem;
+    right: 3rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 38;
+  }
+}
+
+@media (max-width: 768px) {
+  .repair {
+    &__title {
+      margin: 12.3rem auto 10rem;
+      padding: 0;
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      margin: 6rem auto 0rem;
+
+      &-img {
+        flex-basis: 35%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      &-text {
+        flex-basis: 64%;
+        margin-left: 5rem;
+
+        strong {
+          display: block;
+          font-size: 2.2rem;
+          font-weight: 500;
+          line-height: 2.6rem;
+          .medium();
+          margin-bottom: 2rem;
+        }
+
+        p {
+          display: inline-block;
+          margin-bottom: 2rem;
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: 2.8rem;
+          .light();
+        }
+
+        h4 {
+          margin-bottom: 9rem;
+          .medium();
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .services {
+    margin: 20rem 0 0 0;
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      text-align: center;
+      margin: 0 auto;
+      .medium();
+    }
+
+    &-prev-btn {
+      left: 0rem;
+      background-color: @whitecolor;
+    }
+
+    &-next-btn {
+      right: 1rem;
+      top: 5rem;
+      background-color: @whitecolor;
+    }
+
+    &__slider {
+      margin: 0 auto 0rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &-item {
+        height: 100%;
+      }
+
+      &-btn {
+        position: absolute;
+        top: 110%;
+        transform: translateY(-50%);
+        width: 1.7rem;
+        height: 3.2rem;
+        border: none;
+        background-color: @whitecolor;
+      }
+    }
+
+    &__block {
+      margin: 0 auto;
+      display: block;
+
+      &-img {
+        margin: 0 auto 0 auto;
+        transform: rotate(90deg);
+
+        img {
+        }
+      }
+
+      &-text {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+
+        strong {
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+          .medium();
+          margin-bottom: 0;
+        }
+
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          .light();
+          margin-top: 2.5rem;
+        }
+
+        h4 {
+          .medium();
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          margin: 2.5rem 0 0 0;
+        }
+
+        button {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 25rem;
+      display: inherit;
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 3.8rem;
+      .light();
+
+      a {
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 102, 255, 0.6);
+        }
+      }
+    }
+
+    .pop__open {
+      width: 26rem;
+    }
+  }
+
+  .guarantee {
+    margin: 30rem 0rem 0rem 0rem;
+
+    &__title {
+    }
+
+    &__main {
+      &-text {
+        padding: 0;
+      }
+    }
+  }
+
+  .about {
+    margin-top: 30rem;
+
+    &__title {
+    }
+  }
+
+  .footer {
+    p {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  // Заявка на ремонт
+  .form {
+    display: block;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+
+    label {
+      display: block;
+      margin: 2rem 0 0 1.5rem;
+      text-align: left;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      .regular();
+      font-size: 1.4rem;
+
+      span {
+        color: red;
+      }
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+      height: 4.6rem;
+      padding-left: 1.5rem;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      .light();
+      background-color: @whitecolor;
+      color: @bordercolor;
+      border: 0.5px solid @bordercolor;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+
+      color: @textcolor;
+
+      &:valid:not(:placeholder-shown) {
+        border-color: #00e75c;
+      }
+
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &::-moz-placeholder {
+        opacity: 1;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:-moz-placeholder {
+        opacity: 1;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 1;
+        -ms-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus::-moz-placeholder {
+        opacity: 0;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus:-moz-placeholder {
+        opacity: 0;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus:-ms-input-placeholder {
+        opacity: 0;
+        -ms-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .form__input {
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      width: 95%;
+      height: 15rem;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      .light();
+      background-color: @whitecolor;
+      color: @textcolor;
+      border-radius: 0.5rem;
+    }
+  }
+
+  // Заявка на ремонт
+  .pop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 42;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &__header {
+      padding-top: 1.5rem;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      .medium();
+    }
+
+    &__form {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background-color: @whitecolor;
+    }
+
+    &__send {
+      display: block;
+      margin: 4rem auto 1.5rem;
+    }
+
+    &__close {
+      position: absolute;
+      top: 0rem;
+      right: 2rem;
+      width: 2rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: @bluecolor;
+    }
+  }
+
+  .pop_guarant {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup__guarantee {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: @whitecolor;
+    overflow-y: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 1.5rem;
+      width: 2.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-wrapper {
+      margin: 0rem auto;
+      max-width: 94rem;
+      max-height: 46rem;
+    }
+
+    &-title {
+      text-align: center;
+      padding-top: 3.5rem;
+      margin: 0rem 1.5rem 3.5rem;
+
+      h3 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      margin: 0rem 1.5rem 0rem 1.5rem;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      .light();
+
+      ul {
+        padding-left: 0;
+      }
+
+      strong {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .medium();
+
+        &::last-child {
+          margin-top: 2.8rem;
+        }
+      }
+
+      &-done {
+        margin-bottom: 3.5rem;
+      }
+    }
+
+    .btn__wrapper {
+      display: inherit;
+      text-align: center;
+      margin: 4.5rem auto 1.5rem;
+
+      .btn__index {
+        text-align: center;
+        width: 26rem;
+        height: 4.7rem;
+        color: @whitecolor;
+        background-color: @bluecolor;
+        .medium();
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        border: 2px solid @bluecolor;
+        border-radius: 0.5rem;
+        transition: all 300ms ease;
+
+        &:hover {
+          color: @bluecolor;
+          background-color: @whitecolor;
+          border: 2px solid @bluecolor;
+        }
+      }
+    }
+  }
+
+  .guarantee__img {
+    display: none;
+  }
+
+  .interactive_one {
+    display: none;
+  }
+
+  .interactive_three {
+    display: none;
+  }
+
+  .interactive_four {
+    display: none;
+  }
+
+  #upbutton {
+    background: url("../img/up-arrow.svg") no-repeat top left;
+    height: 5rem;
+    width: 5rem;
+    bottom: 14rem;
+    right: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 38;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    &__logo {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__schedule {
+      display: none;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+  }
+
+  .repair {
+    margin-top: 0;
+
+    &__title {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &__block {
+      margin-top: 6rem;
+      text-align: center;
+      transition: all 0.3s;
+
+      &:hover {
+        .repair__block-hover {
+          filter: blur(0);
+          opacity: 1;
+
+          &:hover {
+            filter: blur(0);
+            opacity: 1;
+            scale: (0.9);
+          }
+        }
+      }
+
+      &-item {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        .light();
+      }
+    }
+  }
+
+  .services {
+    margin: 1.8rem 0 0 0;
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      text-align: center;
+      margin: 0 auto;
+      .medium();
+    }
+
+    &-prev-btn {
+      left: 0rem;
+      background-color: @whitecolor;
+    }
+
+    &-next-btn {
+      right: 1rem;
+      top: 1rem;
+      background-color: @whitecolor;
+    }
+
+    &__slider {
+      margin: 0 auto 0rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &-item {
+        height: 100%;
+      }
+
+      &-btn {
+        position: absolute;
+        top: 110%;
+        transform: translateY(-50%);
+        width: 1.7rem;
+        height: 3.2rem;
+        border: none;
+        background-color: @whitecolor;
+      }
+    }
+
+    &__block {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-img {
+        margin: 0 auto;
+        transform: rotate(90deg);
+
+        img {
+        }
+      }
+
+      &-text {
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        strong {
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+          .medium();
+          margin-bottom: 0;
+        }
+
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          .light();
+          margin-top: 2.5rem;
+          width: 80%;
+        }
+
+        h4 {
+          .medium();
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          margin: 2.5rem 0 0 0;
+        }
+
+        button {
+          margin-top: 2.5rem;
+        }
+      }
+
+      .pop__open {
+        width: 26rem;
+      }
+    }
+
+    &__text {
+      margin-top: 35rem;
+      display: inherit;
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 3.8rem;
+      .light();
+
+      a {
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 102, 255, 0.6);
+        }
+      }
+    }
+  }
+
+  .guarantee {
+    margin: 11.8rem 0rem 0rem 0rem;
+
+    &__title {
+      margin-top: 0rem;
+    }
+
+    &__main {
+      &-text {
+        padding: 0;
+      }
+    }
+  }
+
+  .about {
+    margin-top: 11.8rem;
+
+    &__title {
+    }
+  }
+
+  .footer {
+    p {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  // Заявка на ремонт
+  .form {
+    display: block;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+
+    label {
+      display: block;
+      margin: 2rem 0 0 1.5rem;
+      text-align: left;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      .regular();
+      font-size: 1.4rem;
+
+      span {
+        color: red;
+      }
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+      height: 4.6rem;
+      padding-left: 1.5rem;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      .light();
+      background-color: @whitecolor;
+      color: @bordercolor;
+      border: 0.5px solid @bordercolor;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+
+      color: @textcolor;
+
+      &:valid:not(:placeholder-shown) {
+        border-color: #00e75c;
+      }
+
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &::-moz-placeholder {
+        opacity: 1;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:-moz-placeholder {
+        opacity: 1;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 1;
+        -ms-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus::-moz-placeholder {
+        opacity: 0;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus:-moz-placeholder {
+        opacity: 0;
+        -moz-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus:-ms-input-placeholder {
+        opacity: 0;
+        -ms-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .form__input {
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      width: 95%;
+      height: 15rem;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      .light();
+      background-color: @whitecolor;
+      color: @textcolor;
+      border-radius: 0.5rem;
+    }
+  }
+
+  // Заявка на ремонт
+  .pop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 42;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+
+    &__header {
+      padding-top: 1.5rem;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      .medium();
+    }
+
+    &__form {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background-color: @whitecolor;
+    }
+
+    &__send {
+      display: block;
+      margin: 2rem auto 1.5rem;
+    }
+
+    &__close {
+      position: absolute;
+      top: 0rem;
+      right: 1rem;
+      width: 2rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: @bluecolor;
+    }
+  }
+
+  .pop_guarant {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup__guarantee {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: @whitecolor;
+    overflow-y: auto;
+
+    .pop__close {
+      position: absolute;
+      top: 0rem;
+      right: 0.5rem;
+      width: 3.5rem;
+      text-align: center;
+      border: none;
+      font-size: 3rem;
+      background-color: transparent;
+      color: #0066ff;
+    }
+
+    &-wrapper {
+      margin: 0rem auto;
+      max-width: 94rem;
+      max-height: 46rem;
+    }
+
+    &-title {
+      text-align: center;
+      padding-top: 3.5rem;
+      margin: 0rem 1.5rem 3.5rem;
+
+      h3 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        .medium();
+      }
+    }
+
+    &-text {
+      margin: 0rem 1.5rem 0rem 1.5rem;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      .light();
+
+      ul {
+        padding-left: 0;
+      }
+
+      strong {
+        font-size: 1.6rem;
+        line-height: 1.9rem !important;
+        .medium();
+
+        &::last-child {
+          margin-top: 2.8rem;
+        }
+      }
+
+      &-done {
+        margin-bottom: 3.5rem;
+      }
+    }
+
+    .btn__wrapper {
+      display: inherit;
+      text-align: center;
+      margin: 4.5rem auto 1.5rem;
+
+      .btn__index {
+        text-align: center;
+        width: 26rem;
+        height: 4.7rem;
+        color: @whitecolor;
+        background-color: @bluecolor;
+        .medium();
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        border: 2px solid @bluecolor;
+        border-radius: 0.5rem;
+        transition: all 300ms ease;
+
+        &:hover {
+          color: @bluecolor;
+          background-color: @whitecolor;
+          border: 2px solid @bluecolor;
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт тетелфонiв мобiльна версiя 576px
+  .phone__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .popphone__price {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      overflow: auto;
+
+      .pop__close {
+        position: absolute;
+        top: 0rem;
+        right: 0.5rem;
+        width: 3.5rem;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        background-color: transparent;
+        color: #0066ff;
+      }
+
+      &-title {
+        margin: 0 1.5rem;
+
+        h3 {
+          padding: 3.5rem 0 0;
+          display: block;
+          text-align: center;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+
+      &-text {
+        strong {
+          display: block;
+          margin: 3.5rem 0 1rem 0;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          .medium();
+          padding-left: 1.5rem;
+        }
+
+        table {
+          width: 100%;
+          background-color: @whitecolor;
+          border: 0.1rem solid #e5e5e5;
+        }
+
+        tr {
+          display: block;
+
+          th {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1.2rem 1.5rem 0rem 1.5rem;
+          }
+
+          td {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0.5rem 1.5rem 1.2rem 1.5rem;
+          }
+
+          th,
+          td {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            .light();
+          }
+        }
+
+        .line {
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 0.1rem solid #e5e5e5;
+            width: 90%;
+            bottom: 0;
+            left: 2rem;
+          }
+        }
+      }
+
+      &-wrapper {
+        margin: 0 auto;
+
+        .fornote {
+          padding-top: 3.5rem;
+          padding-left: 1.5rem;
+          display: flex;
+        }
+
+        p {
+          padding-left: 2.5rem;
+          margin: 0 0 2rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          .light();
+          color: @greycolor;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            transform: translateY(80%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: @bluecolor;
+          }
+        }
+
+        .btn__wrapper {
+          display: inherit;
+          text-align: center;
+          margin: 2.5rem auto 1.5rem;
+
+          .btn__index {
+            text-align: center;
+            width: 26rem;
+            height: 4.7rem;
+            color: @whitecolor;
+            background-color: @bluecolor;
+            .medium();
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            border: 2px solid @bluecolor;
+            border-radius: 0.5rem;
+            transition: all 300ms ease;
+
+            &:hover {
+              color: @bluecolor;
+              background-color: @whitecolor;
+              border: 2px solid @bluecolor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт планшетiв мобiльна версiя 576px
+  .tablet__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .poptablet__price {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      overflow: auto;
+
+      .pop__close {
+        position: absolute;
+        top: 0rem;
+        right: 0.5rem;
+        width: 3.5rem;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        background-color: transparent;
+        color: #0066ff;
+      }
+
+      &-title {
+        margin: 0 1.5rem;
+
+        h3 {
+          padding: 3.5rem 0 0;
+          display: block;
+          text-align: center;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+
+      &-text {
+        strong {
+          display: block;
+          margin: 3.5rem 0 1rem 0;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          .medium();
+          padding-left: 1.5rem;
+        }
+
+        table {
+          width: 100%;
+          background-color: @whitecolor;
+          border: 0.1rem solid #e5e5e5;
+        }
+
+        tr {
+          display: block;
+
+          th {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1.2rem 1.5rem 0rem 1.5rem;
+          }
+
+          td {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0.5rem 1.5rem 1.2rem 1.5rem;
+          }
+
+          th,
+          td {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            .light();
+          }
+        }
+
+        .line {
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 0.1rem solid #e5e5e5;
+            width: 90%;
+            bottom: 0;
+            left: 2rem;
+          }
+        }
+      }
+
+      &-wrapper {
+        margin: 0 auto;
+
+        .fornote {
+          padding-top: 3.5rem;
+          padding-left: 1.5rem;
+          display: flex;
+        }
+
+        p {
+          padding-left: 2.5rem;
+          margin: 0 0 2rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          .light();
+          color: @greycolor;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            transform: translateY(80%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: @bluecolor;
+          }
+        }
+
+        .btn__wrapper {
+          display: inherit;
+          text-align: center;
+          margin: 2.5rem auto 1.5rem;
+
+          .btn__index {
+            text-align: center;
+            width: 26rem;
+            height: 4.7rem;
+            color: @whitecolor;
+            background-color: @bluecolor;
+            .medium();
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            border: 2px solid @bluecolor;
+            border-radius: 0.5rem;
+            transition: all 300ms ease;
+
+            &:hover {
+              color: @bluecolor;
+              background-color: @whitecolor;
+              border: 2px solid @bluecolor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт ПК та Ноутбукiв 576px
+  .pc__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .pc__style {
+      position: relative;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      .medium();
+      color: @textcolor;
+      text-decoration: none;
+      background-color: #f5f5f5 !important;
+      border: none;
+      padding-top: 2.5rem !important;
+      padding-left: 1.5rem !important;
+
+      &:nth-child(1) {
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: @textcolor;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        background: url("../img/downarrow.svg") no-repeat center;
+        width: 1.4rem;
+        height: 0.8rem;
+        margin: 0.9rem 0 0 0.5rem;
+      }
+    }
+
+    .poppc__price {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      overflow: auto;
+
+      .pop__close {
+        position: absolute;
+        top: 0rem;
+        right: 0.5rem;
+        width: 3.5rem;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        background-color: transparent;
+        color: #0066ff;
+      }
+
+      &-title {
+        margin: 0 1.5rem;
+
+        h3 {
+          padding: 3.5rem 0 1rem;
+          display: block;
+          text-align: center;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+
+      &-text {
+        strong {
+          display: block;
+          padding: 3.5rem 0 1rem 1.5rem;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          .medium();
+          background-color: #f5f5f5;
+
+          &:nth-child(1) {
+            padding-top: 2.3rem;
+          }
+        }
+
+        table {
+          width: 100%;
+          background-color: @whitecolor;
+          border: 0.1rem solid #e5e5e5;
+        }
+
+        tr {
+          width: 104%;
+          display: block;
+
+          th {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1.2rem 3rem 0rem 1.5rem;
+          }
+
+          td {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0.5rem 3rem 1.2rem 1.5rem;
+          }
+
+          th,
+          td {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            .light();
+          }
+        }
+
+        .line {
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 0.1rem solid #e5e5e5;
+            width: 88%;
+            bottom: 0;
+            left: 1.3rem;
+          }
+        }
+      }
+
+      &-wrapper {
+        margin: 0 auto;
+
+        .card__body {
+          padding-left: 0;
+        }
+
+        .fornote {
+          padding-top: 3.5rem;
+          display: flex;
+          background-color: #f5f5f5;
+        }
+
+        p {
+          padding-left: 3.5rem;
+          margin: 0 0 2rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          .light();
+          color: @greycolor;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            transform: translateY(80%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: @bluecolor;
+          }
+        }
+
+        .btn__wrapper {
+          display: inherit;
+          text-align: center;
+          margin: 2.5rem auto 1.5rem;
+
+          .btn__index {
+            text-align: center;
+            width: 26rem;
+            height: 4.7rem;
+            color: @whitecolor;
+            background-color: @bluecolor;
+            .medium();
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            border: 2px solid @bluecolor;
+            border-radius: 0.5rem;
+            transition: all 300ms ease;
+
+            &:hover {
+              color: @bluecolor;
+              background-color: @whitecolor;
+              border: 2px solid @bluecolor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Модальне вікно ремонт інші гарджети 576px
+  .another__pricepop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 42;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .pc__style {
+      position: relative;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      .medium();
+      color: @textcolor;
+      text-decoration: none;
+      background-color: #f5f5f5 !important;
+      border: none;
+      padding-top: 2.5rem !important;
+      padding-left: 1.5rem !important;
+
+      &:hover {
+        text-decoration: none;
+        color: @textcolor;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        background: url("../img/downarrow.svg") no-repeat center;
+        width: 1.4rem;
+        height: 0.8rem;
+        margin: 0.9rem 0 0 0.5rem;
+      }
+    }
+
+    .popanother__price {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      overflow: auto;
+
+      .pop__close {
+        position: absolute;
+        top: 0rem;
+        right: 0.5rem;
+        width: 3.5rem;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        background-color: transparent;
+        color: #0066ff;
+      }
+
+      &-title {
+        margin: 0 1.5rem;
+
+        h3 {
+          padding: 3.5rem 0 1rem;
+          display: block;
+          text-align: center;
+          font-size: 3rem;
+          line-height: 3.6rem;
+          .medium();
+        }
+      }
+
+      &-text {
+        strong {
+          display: block;
+          padding: 3.5rem 0 1rem 1.5rem;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          .medium();
+          background-color: #f5f5f5;
+
+          &:nth-child(1) {
+            padding-top: 2.3rem;
+          }
+        }
+
+        table {
+          width: 101%;
+          background-color: @whitecolor;
+          border: 0.1rem solid #e5e5e5;
+        }
+
+        tr {
+          width: 104%;
+          display: block;
+
+          th {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1.2rem 3rem 0rem 1.5rem;
+          }
+
+          td {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0.5rem 3rem 1.2rem 1.5rem;
+          }
+
+          th,
+          td {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            .light();
+          }
+        }
+
+        .line {
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 0.1rem solid #e5e5e5;
+            width: 88%;
+            bottom: 0;
+            left: 1.3rem;
+          }
+        }
+      }
+
+      &-wrapper {
+        margin: 0 auto;
+
+        .card__body {
+          padding-left: 0;
+        }
+
+        .fornote {
+          padding-top: 3.5rem;
+          display: flex;
+          background-color: #f5f5f5;
+        }
+
+        p {
+          padding-left: 3.5rem;
+          margin: 0 0 2rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          .light();
+          color: @greycolor;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            transform: translateY(80%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: @bluecolor;
+          }
+        }
+
+        .btn__wrapper {
+          display: inherit;
+          text-align: center;
+          margin: 2.5rem auto 1.5rem;
+
+          .btn__index {
+            text-align: center;
+            width: 26rem;
+            height: 4.7rem;
+            color: @whitecolor;
+            background-color: @bluecolor;
+            .medium();
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            border: 2px solid @bluecolor;
+            border-radius: 0.5rem;
+            transition: all 300ms ease;
+
+            &:hover {
+              color: @bluecolor;
+              background-color: @whitecolor;
+              border: 2px solid @bluecolor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .guarantee__img {
+    display: none;
+  }
+
+  .interactive_one {
+    display: none;
+  }
+
+  .interactive_three {
+    display: none;
+  }
+
+  .interactive_four {
+    display: none;
+  }
+
+  #upbutton {
+    background: url("../img/up-arrowm.svg") no-repeat top left;
+    height: 3.5rem;
+    width: 3.5rem;
+    bottom: 3.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 38;
+  }
+}
+
+@media (max-width: 320px) {
+  .services {
+    margin: 1.8rem 0 0 0;
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      text-align: center;
+      margin: 0 auto;
+      .medium();
+    }
+
+    &-prev-btn {
+      left: 0rem;
+      background-color: @whitecolor;
+    }
+
+    &-next-btn {
+      right: 1rem;
+      top: 1rem;
+      background-color: @whitecolor;
+    }
+
+    &__slider {
+      margin: 0 auto 0rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &-item {
+        height: 100%;
+      }
+
+      &-btn {
+        position: absolute;
+        top: 90%;
+        transform: translateY(-50%);
+        width: 1.7rem;
+        height: 3.2rem;
+        border: none;
+        background-color: @whitecolor;
+      }
+    }
+
+    &__block {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-img {
+        margin: 0 auto 0 auto;
+        transform: rotate(90deg);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-text {
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        strong {
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+          .medium();
+          margin-bottom: 0;
+        }
+
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          .light();
+          margin-top: 2.5rem;
+          width: 80%;
+        }
+
+        h4 {
+          .medium();
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          margin: 2.5rem 0 0 0;
+        }
+
+        button {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 30rem;
+      display: inherit;
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 3.8rem;
+      .light();
+
+      a {
+        transition: linear 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(0, 102, 255, 0.6);
+        }
+      }
+    }
+  }
+
+  .pop {
+    .form__input {
+      height: 11rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.repair__done {
+  text-align: center;
+  width: 398px;
+  margin-left: -18px;
+}
+.repair__done h2 {
+  margin-bottom: 30px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  color: #000000;
+}
+.repair__done p {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+  text-align: center;
+  color: #000000;
+}
+.repair__done img {
+  margin: 30px auto 0;
+}
+@media (max-width: 576px) {
+  .repair__done {
+    text-align: center;
+    width: 298px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}

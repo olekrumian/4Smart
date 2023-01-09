@@ -1,0 +1,67 @@
+// Btn 
+.btn_main {
+    width: 15rem;
+    height: 4.7rem;
+    color: @bluecolor;
+    background-color: @bluecolor;
+    .medium();
+    font-size: 2rem;
+    font-weight: 500;
+    border: 2px solid @bluecolor;
+    border-radius: 0.5rem;
+    transition: all 300ms ease;
+
+    &:hover {
+        color: @whitecolor;
+        background-color: @whitecolor;
+        border: 2px solid @bluecolor;
+    }
+}
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    background: @whitecolor;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-shutter-out-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @bluecolor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-shutter-out-horizontal:hover,
+.hvr-shutter-out-horizontal:focus,
+.hvr-shutter-out-horizontal:active {
+    color: @whitecolor;
+}
+
+.hvr-shutter-out-horizontal:hover:before,
+.hvr-shutter-out-horizontal:focus:before,
+.hvr-shutter-out-horizontal:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
